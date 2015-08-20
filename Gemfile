@@ -33,7 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# gem ‘jbuilder’
+gem ‘jbuilder’
 
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
