@@ -6,6 +6,9 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @doses = Dose.all
+    @dose = Dose.new
+    @ingredients = Ingredient.all
   end
 
   def new
