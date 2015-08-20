@@ -1,2 +1,8 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="col-xs-12 text-center">
+  <h1><%= @cocktail.name %></h1>
+
+  <%= link_to "Delete this cocktail", cocktail_path(@cocktail), method: :delete, class:"btn btn-danger" %>
+  <%= link_to "Back to Menu", cocktails_path, class:"btn btn-primary" %>
+
+</div>
+

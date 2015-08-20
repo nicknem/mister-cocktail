@@ -1,2 +1,11 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<div class="text-center">
+  <h1>Tous les cocktails! COCK! TAIL!</h1>
+</div>
+
+<% @cocktails.each do |c| %>
+  <div class="col-xs-12 col-sm-4">
+    <%= link_to(c) do %>
+    <h2><%= c.name %></h2>
+    <%end %>
+  </div>
+<% end %>
