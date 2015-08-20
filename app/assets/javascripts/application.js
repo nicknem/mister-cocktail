@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+// app/assets/javascripts/application.js
+
+//= require bootstrap-sprockets
+//= require_tree .
