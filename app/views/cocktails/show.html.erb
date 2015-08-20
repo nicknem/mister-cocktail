@@ -1,5 +1,6 @@
 <div class="col-xs-12 text-center">
   <h1><%= @cocktail.name %></h1>
+  <h3><%= @cocktail.ingredients%></h3>
 
   <%= link_to "Delete this cocktail", cocktail_path(@cocktail), method: :delete, class:"btn btn-danger" %>
   <%= link_to "Back to Menu", cocktails_path, class:"btn btn-primary" %>
