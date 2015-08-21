@@ -30,21 +30,7 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :picture)
   end
 
-
-  {
-  "Statement": [{
-      "Effect": "Allow",
-      "Action": "s3:ListAllMyBuckets",
-      "Resource": "arn:aws:s3:::*"
-    }, {
-      "Action": "s3:*",
-      "Effect": "Allow",
-      "Resource": [
-        "arn:aws:s3:::antonin-mister-cocktail"
-      ]
-  }]
-}
 end

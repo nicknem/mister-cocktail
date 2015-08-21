@@ -1,7 +1,10 @@
 <div class="col-xs-12 text-center">
-  <h1><%= @cocktail.name %></h1>
+
+
 
   <ul class="list-unstyled">
+  <h3><%= @cocktail.name %></h3>
+  <%= image_tag @cocktail.picture.https://s3-eu-west-1.amazonaws.com/antonin-mister-cocktail/bloody-mary.jpg?X-Amz-Date=20150821T101714Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=f012fa79a91cc749e50a4f0e8bc77a5d92d1c7a0726fecd05a84e783460258c9&X-Amz-Credential=ASIAJDKL7MCQAHYPC63A/20150821/eu-west-1/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEKP//////////wEakALyoacfmeJw6WJOOLP%2BZHuK/4CtxfgQAeDZknShpDdUPvXwAUzk6MU0ti5YozWj4iMCHrRXk68jYq6KhnzNuYTLSkbiVUTxfmtbWnguhOqQR4nLOX1ySDRuDkO15X2FNUVCaBxnVlxPP3rmYAR3zn92D5InM8Tu5a795oA92EwbjBnQJX4FGpjoVI%2Bq1KuFhuVY0OP/ZfHwO5JGSlPnnb3K8XshD05pCaotruwVKIAvC6SWLNbGpXe%2BSLg41OJ/GyidrYxIihPIBfg9cqmweGHzHUG57gtOwXNSD5H5DAnYoIWLGI47wfaacsjnHE2lpIVtb/anGDB4qTYbBZsaWeLI7I6lKqIwZtyg6QRqSk/5pSCq6NuuBQ%3D%3D(:medium) %>
     <% @cocktail.doses.each do |dose| %>
     <li>
       <%= dose.description  %> (<%= dose.ingredient.name %>)
@@ -13,6 +16,7 @@
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description, placeholder: "J'en veux plus" %>
     <%= f.input :ingredient_id, collection: Ingredient.all, prompt: "Choose an ingredient!" %>
+    <%= f.input :picture %>
     <%= f.button :submit, class:"btn btn-primary" %>
   <%end %>
 
