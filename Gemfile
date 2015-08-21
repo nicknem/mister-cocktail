@@ -51,6 +51,8 @@ end
 
 gem 'rspec-rails', group: [ :test ]
 
+gem 'figaro'
+
 
 gem 'rails_12factor', group: :production
 gem 'puma',           group: :production
