@@ -15,8 +15,3 @@
 # Ignore application configuration
 /config/application.yml
 
-
-# Change those values with yours!
-S3_BUCKET_NAME: "antonin-mister-cocktail"
-AWS_ACCESS_KEY_ID: "AKIAJ4UFAML2ZYGV5BYQ"
-AWS_SECRET_ACCESS_KEY: "gon3OPumAHouZQCmHEuKbkE3VUHYCzuQRJqb1IkO"

@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+  # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 # Examples:
@@ -10,8 +10,71 @@ Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
 
-Cocktail.destroy_all
 
+Ingredient.destroy_all
+ingredients = [
+'Angostura Bitter',
+'Bacardi Superior Rum',
+'Banana',
+'Beer',
+'Bitter Lemon',
+'Blackcurrant Cordial',
+'Blackcurrant Juice',
+'Brandy',
+'Brown Sugar',
+'Butter',
+'Champagne',
+'Chocolate',
+'Cider',
+'Cinnamon',
+'Cocoa Powder',
+'Coffee',
+'Cointreau',
+'Coke',
+'Cranberry Juice',
+'Cream',
+'Dark Rum',
+'Diet Coke',
+'Double Cream',
+'Egg white',
+'Gin',
+'Ginger Ale',
+'Grenadine',
+'Honey',
+'Hot Chocolate',
+'Lemon',
+'Lemon Juice',
+'Lemonade',
+'Lime',
+'Lime Juice',
+'Marmalade',
+'Milk',
+'Nutmeg',
+'Orange Juice',
+'Pepper',
+'Red Wine',
+'Rum',
+'Salt',
+'Sherry Sweet',
+'Soda Water',
+'Sparkling Water',
+'Sugar',
+'Sugar Syrup',
+'Sweet Vermouth',
+'Tabasco Sauce',
+'Tequila',
+'Tonic Water',
+'Triple Sec',
+'Vermouth',
+'Vodka',
+'Whisky',
+'White Rum',
+'White Wine',
+'Worcestershire Sauce'
+]
+ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
+
+Cocktail.destroy_all
 cocktails = [
   {
     name: "Old Fashioned",
@@ -98,5 +161,5 @@ cocktails = [
     picture: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-last-word.jpg"
   }
 ]
-
 cocktails.each { |cocktail| Cocktail.create(cocktail) }
+

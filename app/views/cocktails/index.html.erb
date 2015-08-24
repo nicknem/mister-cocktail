@@ -1,11 +1,20 @@
-<div class="text-center">
-  <h1>Make The Night AWESOME!</h1>
-</div>
+<%= render 'shared/banner' %>
 
-<% @cocktails.each do |c| %>
-  <div class="col-xs-12 col-sm-4">
-    <%= link_to(c) do %>
-    <h2><%= c.name %></h2>
-    <%end %>
-  </div>
-<% end %>
+<div class="container">
+  <% @cocktails.each do |c| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card">
+        <span class="card-bg" style="background-image: url('<%= c.picture.url(:medium) %>')" %></span>
+        <span class="card-shadow"></span>
+        <span class="card-description">The Best Cocktail</span>
+        <span class="card-text">
+          <%= link_to(c) do %>
+          <h2><%= c.name %></h2>
+        <%end %>
+        </span>
+        <a href="#" class="card-link"></a>
+      </div>
+    </div>
+  <% end %>
+
+</div>
